@@ -71,7 +71,7 @@ xmlns="sap.m">
     </HBox>
     <footer>
         <OverflowToolbar >
-            <Text text="© 2023 Rheinmetall AG"/>
+            <Text text="© 2024 Rheinmetall AG"/>
         </OverflowToolbar>
     </footer>
 </Page>

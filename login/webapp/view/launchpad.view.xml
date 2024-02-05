@@ -1,5 +1,5 @@
 <mvc:View
-	controllerName=""
+	controllerName="login.login.controller.launch"
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns="sap.m"
 	xmlns:c="sap.ui.core"
@@ -7,26 +7,38 @@
 	height="100%"
 	busyIndicatorDelay="0"
 >
-<Page class="sapUiResponsivePadding--content">
+<Page class="sapUiResponsivePadding--content sapUiResponsivePadding--header ">
+  <headerContent>
+    <Text class="sapUiTinyMarginBegin"
+        text="Benvenuto TEST"
+    />
+    <ToolbarSpacer
+    />
+    <Title
+        
+        text="PORTALE FORNITORI"
+        titleStyle="H4"
+    />
+    
+  </headerContent>
   <content>
-  <VBox class="sapUiResponsiveMargin"  height="100%" width="75%" alignItems="Center" alignContent="Center" justifyContent="Center">
+  <VBox class="sapUiLargeMarginTop"  width="100%" alignItems="Center" alignContent="Center" justifyContent="Center">
     <HBox justifyContent="SpaceAround" height="80%" width="100%" >
-<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Qualifica Fornitori"  press="onPress"
-frameType="OneByHalf" >
+<GenericTile  class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Qualifica Fornitori"  press="onPress"
+ >
 <TileContent>
-  <ImageContent src="test-resources/sap/m/demokit/sample/GenericTileAsLaunchTile/images/SAPLogoLargeTile_28px_height.png" />
 </TileContent>
 </GenericTile>
 
 <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Richieste Ordini d'Acquisto"
- press="press" frameType= "TwoByHalf">
+ press="press" >
 <TileContent />
 </GenericTile>
 
 <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Lista Ordini d'Acquisto"
- press="press" frameType= "TwoByHalf">
-<TileContent unit="EUR" footer="Current Quarter">
-  <ImageContent src="sap-icon://home-share" />
+ press="press" >
+<TileContent >
+  
 </TileContent>
 </GenericTile>
 </HBox>
@@ -37,7 +49,7 @@ frameType="OneByHalf" >
     <Button text="Logout"
       type="Negative"
       icon="sap-icon://log"
-      press="logOutTrasf" />
+      press="logOut" />
   </Toolbar>
   
 </footer>

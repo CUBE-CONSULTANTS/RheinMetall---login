@@ -68,10 +68,14 @@ sap.ui.define([
                         if(pass === 'test'){
                             var oRouter = sap.ui.core.UIComponent.getRouterFor(that);
                         oRouter.navTo("launchpad");
+                        }else{
+                            MessageBox.error("Password errata")
                         }
                     }else{
                         MessageBox.error("Utente non riconosciuto")
                     }
+                }else{
+                    MessageBox.error("Inserire Credenziali") 
                 }
                 this.getView().byId("RheinLogin").setBusy(false);
                 // var modelloUserSet = this.getOwnerComponent().getModel("modelloUserSet");
@@ -109,7 +113,7 @@ sap.ui.define([
                     // }
                 // })
             },
-
+            
             
             
         });
