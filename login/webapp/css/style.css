@@ -1,0 +1,86 @@
+
+.roundImage {
+  border-radius: 50%;
+}
+
+.largeBoldText {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.mediumText {
+  font-size: 1rem;
+}
+
+.smallText {
+  font-size: 0.75rem;
+}
+
+.textPadding {
+  padding-left: 1rem;
+}
+
+.paddingLeft {
+  padding-left: 1rem;
+}
+
+.sapMBtnEmphasized {
+  background-color: #00406e !important;
+}
+
+.sapMPageHeader {
+  background-color: #007ec1 !important;
+}
+
+.sapMPageFooter>div {
+  background-color: #007ec1 !important;
+}
+
+.sapMTitle {
+  color: white !important;
+}
+
+.sapMBtnBack>span>span {
+  color: white !important;
+}
+
+.zselect {
+  opacity: .7 !important;
+}
+
+.boldText {
+  font-weight: bold;
+}
+
+.normalText {
+  font-weight: normal;
+}
+
+.customText {
+  color: red;
+}
+
+.sapMInput.myCustomCSSClass .sapMInputBaseInner {
+  text-transform: uppercase;
+}
+
+/* 1 METODO CSS GIUSTIFICATIVI */
+/* .alternateColor tbody tr:nth-child(even) {
+  background: rgba(121, 174, 234, 0.5) !important;
+} */
+
+.alternateColor tbody tr:nth-child(2n + 1) {
+  background: rgba(121, 174, 234, 0.5) !important;
+}
+
+@media screen and (min-width: 768px) {
+  .alternateColor tbody tr:nth-child(even) {
+    background: rgba(121, 174, 234, 0.5) !important;
+  }
+}
+
+/* set display flex in odd tr */
+
+.fixIOS>div>input {
+  font-size: 16px
+}
