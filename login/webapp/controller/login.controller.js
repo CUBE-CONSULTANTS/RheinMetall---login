@@ -1,11 +1,14 @@
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
-    "sap/m/MessageBox"
+    "sap/m/MessageBox",
+	"sap/m/MessageToast"
 ],
     /**
      * @param {typeof sap.ui.core.mvc.Controller} Controller
      */
-    function (Controller, MessageBox) {
+    function (Controller,
+	MessageBox,
+	MessageToast) {
         "use strict";
 
         return Controller.extend("login.login.controller.login", {
@@ -53,46 +56,58 @@ sap.ui.define([
             //     this.byId("password").setValue("")
             // },
             login: function () {
+                debugger
                 // chiamata ajax per la UserSet e navigazione verso la pagina della lista trasferte
                 this.getView().byId("RheinLogin").setBusy(true);
                 var ModelloUsermane = this.getOwnerComponent().getModel("modelloUname");
-                var usermane = ModelloUsermane.getProperty("/Uname");
+                var username = ModelloUsermane.getProperty("/Uname");
                 var pass = ModelloUsermane.getProperty("/Password");
                 var that = this;
-                var modelloUserSet = this.getOwnerComponent().getModel("modelloUserSet");
-                $.ajax({
-                    url: "/sap/bc/bsp/sap/zui5_dst/userset.json",
-                    method: 'post',
-                    // beforeSend: (xhr) => xhr.setRequestHeader('Authorization', "Basic " + btoa(`${usermane}:${pass}`)),
-                    headers: {
-                        // "Authorization": "Basic " + btoa(`${usermane}:${pass}`),
-                        // "iv_uname": usermane,
-                        "sap-client": "500", 
-                        "sap-sessioncmd": "open",
-                        // "Connection": "keep-alive", 
-                        "Accept": 'application/json'
-                      },
-                   data:JSON.stringify({
-                        "iv_uname": usermane,
-                    }),
-                    dataType: "text",
-                    contentType: 'application/json',
-                    success: function(data, status, xhr) {
-                        var dati = JSON.parse(data);
-                        modelloUserSet.setData(dati);
-                        that.getView().byId("RheinLogin").setBusy(false);
-                        var oRouter = sap.ui.core.UIComponent.getRouterFor(that);
-                        oRouter.navTo("ListaTrasferte");
-                    },
-                    error: function (jqXhr, textStatus, errorMessage) {
-                        that.getView().byId("RheinLogin").setBusy(false);
-                        MessageBox.show(`Errore nella Login`, {
-                            onClose: function (oAction) {
-                                
-                            },
-                          });
+                if(username && pass){
+                    if(username === 'test'){
+                        if(pass === 'test'){
+                            var oRouter = sap.ui.core.UIComponent.getRouterFor(that);
+                        oRouter.navTo("launchpad");
+                        }
+                    }else{
+                        MessageBox.error("Utente non riconosciuto")
                     }
-                })
+                }
+                this.getView().byId("RheinLogin").setBusy(false);
+                // var modelloUserSet = this.getOwnerComponent().getModel("modelloUserSet");
+                // $.ajax({
+                //     url: "/sap/bc/bsp/sap/zui5_dst/userset.json",
+                //     method: 'post',
+                //     // beforeSend: (xhr) => xhr.setRequestHeader('Authorization', "Basic " + btoa(`${usermane}:${pass}`)),
+                //     headers: {
+                //         // "Authorization": "Basic " + btoa(`${usermane}:${pass}`),
+                //         // "iv_uname": usermane,
+                //         "sap-client": "500", 
+                //         "sap-sessioncmd": "open",
+                //         // "Connection": "keep-alive", 
+                //         "Accept": 'application/json'
+                //       },
+                //    data:JSON.stringify({
+                //         "iv_uname": usermane,
+                //     }),
+                //     dataType: "text",
+                //     contentType: 'application/json',
+                //     success: function(data, status, xhr) {
+                //         var dati = JSON.parse(data);
+                //         modelloUserSet.setData(dati);
+                //         that.getView().byId("RheinLogin").setBusy(false);
+                //         var oRouter = sap.ui.core.UIComponent.getRouterFor(that);
+                //         oRouter.navTo("ListaTrasferte");
+                //     },
+                //     error: function (jqXhr, textStatus, errorMessage) {
+                //         that.getView().byId("RheinLogin").setBusy(false);
+                //         MessageBox.show(`Errore nella Login`, {
+                //             onClose: function (oAction) {
+                                
+                //             },
+                        //   });
+                    // }
+                // })
             },
 
             

@@ -83,6 +83,13 @@
           "target": [
             "Targetlogin"
           ]
+        },
+        {
+          "name": "launchpad",
+          "pattern": "launchpad",
+          "target": [
+            "Targetlaunchpad"
+          ]
         }
       ],
       "targets": {
@@ -92,6 +99,13 @@
           "clearControlAggregation": false,
           "viewId": "login",
           "viewName": "login"
+        },
+        "Targetlaunchpad": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "launchpad",
+          "viewName": "launchpad"
         }
       }
     },

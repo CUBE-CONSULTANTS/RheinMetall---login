@@ -1,0 +1,43 @@
+<mvc:View
+	controllerName=""
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+	displayBlock="true"
+	height="100%"
+	busyIndicatorDelay="0"
+>
+<Page >
+  <VBox width="75%" alignItems="Center" alignContent="Center" justifyContent="Center">
+    <HBox >
+<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Qualifica Fornitori"  press="onPress"
+frameType="OneByHalf" >
+<TileContent>
+  <ImageContent src="test-resources/sap/m/demokit/sample/GenericTileAsLaunchTile/images/SAPLogoLargeTile_28px_height.png" />
+</TileContent>
+</GenericTile>
+
+<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Richieste Ordini d'Acquisto"
+ press="press" frameType= "TwoByHalf">
+<TileContent />
+</GenericTile>
+
+<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Lista Ordini d'Acquisto"
+ press="press" frameType= "TwoByHalf">
+<TileContent unit="EUR" footer="Current Quarter">
+  <ImageContent src="sap-icon://home-share" />
+</TileContent>
+</GenericTile>
+</HBox>
+</VBox>
+<footer>
+  <Toolbar>
+    <Button text="Logout"
+      type="Negative"
+      icon="sap-icon://log"
+      press="logOutTrasf" />
+  </Toolbar>
+  
+</footer>
+</Page>
+</mvc:View>

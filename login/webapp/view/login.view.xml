@@ -65,7 +65,7 @@ xmlns="sap.m">
         <!-- <Image src="{value: 'Rheinmetall/gestionespesetrasfertarheinmetal/img/rheinArmi.jpg', formatter: 'sap.ui.require.toUrl'}"
         height="300px"
         width="500px" /> -->
-        <Image src="{value: 'RHEINMETALL---LOGIN/login/public/images/rheinArmi.jpg', formatter: 'sap.ui.require.toUrl'}"
+        <Image src="{value: 'login/login/public/images/rhein3.png', formatter: 'sap.ui.require.toUrl'}"
             height="90px"
             width="300px" />
     </HBox>
