@@ -10,7 +10,7 @@
 <Page class="sapUiResponsivePadding--content sapUiResponsivePadding--header ">
   <headerContent>
     <Text class="sapUiTinyMarginBegin"
-        text="Benvenuto TEST"
+        text="Benvenuto TEST "
     />
     <ToolbarSpacer
     />
