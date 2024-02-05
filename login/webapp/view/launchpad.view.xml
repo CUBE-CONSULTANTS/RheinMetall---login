@@ -7,9 +7,10 @@
 	height="100%"
 	busyIndicatorDelay="0"
 >
-<Page >
-  <VBox width="75%" alignItems="Center" alignContent="Center" justifyContent="Center">
-    <HBox >
+<Page class="sapUiResponsivePadding--content">
+  <content>
+  <VBox class="sapUiResponsiveMargin"  height="100%" width="75%" alignItems="Center" alignContent="Center" justifyContent="Center">
+    <HBox justifyContent="SpaceAround" height="80%" width="100%" >
 <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Qualifica Fornitori"  press="onPress"
 frameType="OneByHalf" >
 <TileContent>
@@ -30,6 +31,7 @@ frameType="OneByHalf" >
 </GenericTile>
 </HBox>
 </VBox>
+</content>
 <footer>
   <Toolbar>
     <Button text="Logout"
